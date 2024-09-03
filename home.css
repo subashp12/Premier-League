@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.club-links ul li img{
+    width: 35px;
+    height: 35px;
+}
+.club-links ul{
+    display: flex;
+    justify-content: end;
+    gap: 0.6rem;
+    padding:0.8rem 0.8rem 0.4rem;
+}
+.club-links li{
+    list-style-type:none;
+    transition: all 0.25s;
+}
+.club-links ul li:first-child{
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    color: gray;
+}
+.club-links li:not(:first-child):hover{
+    transform: scale(1.5,1.5);
+}
+/* Main Navigation Bar Starts Here */
+.mainNav{
+    background-color: #38003c;
+}
+.mainNav ul li a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: rgba(255,255,255,0.5);
+}
+.mainNav ul li{
+    list-style: none;
+    color: rgba(255,255,255,0.5);
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.mainNav ul li{
+    background-image: linear-gradient(90deg,pink,turquoise);
+    background-clip: text;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: all 1s ease;
+}
+a:is(:link,:active,:visited).active{
+    background-size: 100%;
+}
+.mainNav ul li:hover{
+    background-size: 100% 100%;
+}
+.mainNav ul{
+    display: flex;
+    justify-content: end;
+}
+/* Main Area */
+main{
+    margin-top: 0.5rem;
+    background-color: #38003c;
+    padding: 1rem;
+    display: flex;
+}
+main>*{
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+.logoWrapper{
+    width: 40px;
+    height: 50px;
+}
+.logoWrapper img{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    right: 0.8rem;
+    top: -1rem;
+}
+.fixture-container .fixtureWrapper{
+    margin-top: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    line-height: 1.8rem;
+    border-radius: 0.5rem;
+}
+.fixture-container .fixtureWrapper:hover{
+    background-color: #38003c;
+    color: white;
+}
+.fixture-container .fixtureWrapper:hover .time{
+    color: #38003c;
+}
+.fixture-container{
+    background-color: white;
+    width:fit-content;
+    padding: 1em 1rem;
+    border-radius: 0.5em;
+    position: relative;
+    
+}
+
+.fixture-container p{
+    font-size: 12px;
+    text-align: center;
+}
+
+.fixture-container h5{
+    font-size: 1.2rem;
+    color: #38003c;
+    text-align: center;
+    margin-top: 1rem;
+}
+.fixture-container span{
+    line-height: px;
+}
+.fixture-container .time{
+    position:relative;
+    bottom: 0.3em;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 4px;
+    padding: 2px 3px;
+    width: 1rem;
+    height: 0.5rem;
+    font-size: 10px;
+}
+.fixtureLogo{
+    position: relative;
+    top:6.5px;
+    width: 25px;
+    height: 25px;
+}
+.news-container{
+    width: fit-content;
+    padding: 0.5rem;
+}
+.news-container a{
+    text-decoration: none;
+}
+.news-container .SonImgWrapper{
+    margin: 0 auto;
+    width: 40rem;
+    height: 22rem;
+}
+.SonImgWrapper img{
+    border-radius: 0.8rem;
+    height: 100%;
+    width: 100%;
+}
+.news-container p{
+    color:white;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 0.25rem;
+}
+.news-container h4{
+    color: white;
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+    font-weight: normal;
+}
+.aside-container{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+.aside-container>*{
+    margin-top: 0.5rem;
+}
+
+.aside-container .ImageWrapper{
+    width: 17rem;
+    height:10rem;
+    margin: 0 auto;
+}
+.aside-container .ImageWrapper img{
+    width: 100%;
+    height: 100%;
+}
+.aside-container a{
+    font-size: 1rem;
+    color: white;
+}
+.aside-container #FantasyParagraph{
+    color: #38003c;
+    background:linear-gradient(to right, rgb(18, 199, 18),cyan);
+    width: fit-content;
+    padding:0.3rem;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media  screen and (max-width:425px) {
+    .club-links{
+        display: none;
+    }
+    .mainNav ul{
+        flex-wrap: wrap;
+        height: 75px;
+        align-content: center;
+    }
+    .mainNav ul li{
+        flex:1 1 ;
+        margin: 0;
+        padding: 0;
+    }
+}
+@media  screen and (min-width:426px) and (max-width:600px) {
+    .club-links{
+        display: none;
+    }
+    .mainNav ul{
+        flex-wrap: wrap;
+    }
+    .mainNav ul li{
+        flex: 1 1 auto;
+    }
+}
+@media screen and  (min-width:601px) and (max-width:1024px){
+    .club-links{
+        display: none;
+    }
+    .mainNav ul{
+        flex-wrap: wrap;
+    }
+    .mainNav ul li{
+        flex: 1 1 auto;
+    }
+    
+}
+
+
+
+
+
+
+
+
